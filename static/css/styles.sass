@@ -1,0 +1,66 @@
+.on
+     background-color: red
+     border-radius: 50%
+     height: 15px
+     width: 15px
+     box-shadow: 0 0 0 0 rgb(0, 90, 0)
+     transform: scale(1)
+     animation: pulse 2s infinite
+
+     @keyframes pulse 
+          0%
+               transform: scale(0.60)
+               box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7)
+	
+          70%
+               transform: scale(1)
+               box-shadow: 0 0 0 10px rgba(0, 0, 0, 0)
+
+          100%
+               transform: scale(0.60)
+               box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+
+.off 
+     background-color: #50a9ca48
+     border-radius: 50%
+     height: 13px
+     width: 13px
+
+.date
+     font-size: 13px
+
+.card
+     background-color: white
+     .card-text:last-child
+          margin-bottom: 0
+          overflow: hidden
+          display: -webkit-box
+          -webkit-line-clamp: 4
+          -webkit-box-orient: vertical
+     &:hover
+          transition: 0.25s
+          box-shadow: 0 10px 15px #0000001f
+
+
+#card1,#card5,#card9,#card4,#card13,#card17
+     border-top: 3px solid #33b5e5
+     
+#card2,#card6,#card10,#card14,#card18
+     border-top: 3px solid #ff4444
+
+#card3, #card7, #card11,#card15,#card19
+     border-top: 3px solid #00C851
+
+#card4, #card8, #card12, #card16,#card20
+     border-top: 3px solid #ffbb33
+
+.name
+     position: relative
+     z-index: 2
+     cursor: pointer
+     
+img, iframe, a
+     box-sizing: border-box
+     max-width: 100%
+     height: auto
+     word-wrap: break-word

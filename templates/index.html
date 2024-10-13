@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand mr-5" href="/">
+                <h3>CrapApp</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mr-1">
+                        <a class="nav-link text-bold" href="https://zsstaszow.pl/zagadnienia-do-samodzielnej-pracy/" data-toggle="tooltip" data-placement="bottom" title="Nie polecam :c">Strona szkoły<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li
+              class="nav-item mr-1"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="W trakcie tworzenia!"
+            >
+              <a
+                class="nav-link disabled text-bold"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Aktualności</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="col-12 text-light text-center text-muted my-3">
+      Ostatnia aktualizacja: {{ last_update }}
+    </div>
+    <app></app>
+    <div
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast shadow-lg float-right"
+      data-delay="8000"
+      style="position: sticky; bottom: 30; right: 20;"
+    >
+      <div class="toast-header">
+        <strong class="mr-auto"></strong>
+        <small>Właśnie teraz</small>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body"></div>
+    </div>
+    <div
+      class="col-12 text-light text-center text-muted mb-1 mt-5 bottom-0 position-absolute"
+    >
+      <small>
+        Strona używa cookies - co pozwala dodawać znaczniki jako prace domowe i
+        (w przyszłości) notatki. Wszystkie dane zostają zapisane po stronie
+        użytkownika i zostają wymazane po 30 dniach - więc tyle czasu jest na
+        wykonanie znacznika do jego restartu ;)
+      </small>
+    </div>
+    <style>
+      .card-text:last-child {
+        margin-bottom: 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script
+      src="{{ url_for('static', filename='/js/main.js') }}"
+      type="module"
+    ></script>
+  </body>
+</html>

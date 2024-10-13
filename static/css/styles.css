@@ -1,0 +1,114 @@
+.on {
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  -webkit-box-shadow: 0 0 0 0 #005a00;
+          box-shadow: 0 0 0 0 #005a00;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.off {
+  background-color: #50a9ca48;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+}
+
+.date {
+  font-size: 13px;
+}
+
+.card {
+  background-color: white;
+}
+
+.card .card-text:last-child {
+  margin-bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.card:hover {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-box-shadow: 0 10px 15px #0000001f;
+          box-shadow: 0 10px 15px #0000001f;
+}
+
+.card {
+  border-top: 3px solid #33b5e5;
+  
+}
+
+.name {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+img, iframe, a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  word-wrap: break-word;
+}
+
+#sub-name{
+  font-size: 1em;
+  display: block;
+  color: black;
+}
+
+#sub-name:hover{
+  text-decoration: none;
+}
+/*# sourceMappingURL=styles.css.map */
